@@ -12,7 +12,7 @@ const RESULT_COMPUTER_WINS = "LOL, I WIN! Try again :)"
 let gameIsRunning = false; 
 
 //user chooses an option
-const getPlayerChoice = function() {
+const getPlayerChoice = () => {
     const selection = prompt(`Hi! Are you ${ROCK}, ${SCISSORS} or ${PAPER}?`, "").toUpperCase();
     if (
         selection !==  ROCK &&
@@ -25,7 +25,7 @@ const getPlayerChoice = function() {
     return selection;
 }
 
-const getComputerChoice = function() {
+const getComputerChoice = () => {
     const randomValue = Math.random(); 
     if (randomValue < 0.34) {
         return ROCK;
