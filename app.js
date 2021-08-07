@@ -63,6 +63,16 @@ startGameBtn.addEventListener("click", function() {//anonymous function
     console.log(computerChoice);
     const winner = getWinner(playerSelection, computerChoice); 
     console.log(winner)
+    let message = `You picked ${playerSelection}, I picked ${computerChoice}`; 
+    if (winner === RESULT_DRAW) {
+       message = message + `we have a draw! 🍻`;
+    } else if (winner === RESULT_USER_WINS) {
+        message = message + `YOU WON! 🎉`;
+    } else {
+        message = message + `LOL, I won!! 🚀 Try again!`
+    } 
+    alert(message);
+
 });
 
 //a method is a function stored inside an object
