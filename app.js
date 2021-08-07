@@ -37,10 +37,17 @@ const getComputerChoice = function() {
 }
 
 const getWinner = function(computerCh, userCh) {
-    if (cChoice === pChoice) {
+    if (computerCh === userCh) {
         return RESULT_DRAW;
-    }
-  
+    } else if (
+        computerCh === ROCK && userCh === PAPER ||
+        computerCh === PAPER && userCh === SCISSORS ||
+        computerCh === SCISSORS && userCh === ROCK
+        ) {
+            return RESULT_USER_WINS;
+        } else {
+            return RESULT_COMPUTER_WINS;
+        }
 }
 
 startGameBtn.addEventListener("click", function() {//anonymous function
