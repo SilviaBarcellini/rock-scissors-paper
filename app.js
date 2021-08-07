@@ -36,7 +36,7 @@ const getComputerChoice = function() {
     }
 }
 
-const getWinner = function(computerCh, userCh) {
+const getWinner = (computerCh, userCh) => {
     if (computerCh === userCh) {
         return RESULT_DRAW;
     } else if (
