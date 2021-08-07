@@ -6,8 +6,8 @@ const SCISSORS = "SCISSORS";
 const PAPER = "PAPER";
 const DEFAULT_CHOICE = ROCK;
 const RESULT_DRAW = "DRAW";
-const RESULT_USER_WINS = "YOU_WIN"
-const RESULT_COMPUTER_WINS = "I_WIN"
+const RESULT_USER_WINS = "YOU WIN!!"
+const RESULT_COMPUTER_WINS = "LOL, I WIN! Try again :)"
 
 let gameIsRunning = false; 
 
@@ -60,7 +60,9 @@ startGameBtn.addEventListener("click", function() {//anonymous function
     const playerSelection = getPlayerChoice(); 
     console.log(playerSelection);
     const computerChoice = getComputerChoice(); 
-    console.log(computerChoice)
+    console.log(computerChoice);
+    const winner = getWinner(playerSelection, computerChoice); 
+    console.log(winner)
 });
 
 //a method is a function stored inside an object
