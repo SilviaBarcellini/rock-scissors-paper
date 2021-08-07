@@ -65,11 +65,11 @@ startGameBtn.addEventListener("click", function() {//anonymous function
     console.log(winner)
     let message = `You picked ${playerSelection}, I picked ${computerChoice}`; 
     if (winner === RESULT_DRAW) {
-       message = message + `we have a draw! 🍻`;
+       message = message + `, we have a draw! 🍻`;
     } else if (winner === RESULT_USER_WINS) {
-        message = message + `YOU WON! 🎉`;
+        message = message + `, YOU WON! 🎉`;
     } else {
-        message = message + `LOL, I won!! 🚀 Try again!`
+        message = message + `! You lost, I won!! 🚀 Try again!`
     } 
     alert(message);
 
