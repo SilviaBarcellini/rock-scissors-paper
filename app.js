@@ -36,7 +36,12 @@ const getComputerChoice = function() {
     }
 }
 
-
+const getWinner = function(computerCh, userCh) {
+    if (cChoice === pChoice) {
+        return RESULT_DRAW;
+    }
+  
+}
 
 startGameBtn.addEventListener("click", function() {//anonymous function
     if (gameIsRunning) {
