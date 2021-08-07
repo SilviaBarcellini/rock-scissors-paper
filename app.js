@@ -1,11 +1,13 @@
 const startGameBtn = document.getElementById("start-game-btn")
 
+//global variables
 const ROCK = "ROCK"; 
 const SCISSORS = "SCISSORS";
 const PAPER = "PAPER";
 const DEFAULT_CHOICE = ROCK;
 
-const playerChoice = function() {
+//user chooses an option
+const getPlayerChoice = function() {
     const selection = prompt(`Hi! Are you ${ROCK}, ${SCISSORS} or ${PAPER}?`, "").toUpperCase();
     if (
         selection !==  ROCK &&
@@ -18,10 +20,20 @@ const playerChoice = function() {
     return selection;
 }
 
+const getComputerChoice = function() {
+    const randomValue = Math.random(); 
+    if (randomValue < 0.34) {
+        return ROCK;
+    } else if (randomValue < 0.67) {
+        return PAPER;
+    } else {
+        return SCISSORS;
+    }
+}
 
-startGameBtn.addEventListener("click", function() {
+startGameBtn.addEventListener("click", function() {//anonymous function
     console.log("Starting game...");
-    const playerSelection = playerChoice(); 
+    const playerSelection = getPlayerChoice(); 
     console.log(playerSelection);
 });
 
